@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Pérez | Social Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+        .hidden-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .hidden-section.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center px-6 py-12 text-slate-900 antialiased">
+
+    <!-- Profile Section -->
+    <div class="text-center mb-10 opacity-0 translate-y-4 transition-all duration-700 ease-out profile-section">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+            JP
+        </div>
+        <h1 class="text-3xl font-display font-bold text-slate-900 tracking-tight">Juan Pérez</h1>
+        <p class="text-slate-500 mt-2 max-w-xs mx-auto">
+            Consultor Digital & Estratega de Contenidos. Conectemos para crear algo increíble.
+        </p>
+    </div>
+
+    <!-- Main Links -->
+    <div class="w-full max-w-md space-y-4">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/yournumber" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-between p-4 rounded-2xl text-white font-medium shadow-sm transition-all transform hover:scale-[1.02] active:scale-[0.98] bg-green-500 hover:bg-green-600">
+            <div class="flex items-center gap-3">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                <span>WhatsApp</span>
+            </div>
+            <div class="bg-white/20 p-1.5 rounded-full">
+                <i data-lucide="more-horizontal" class="w-4 h-4"></i>
+            </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-between p-4 rounded-2xl text-white font-medium shadow-sm transition-all transform hover:scale-[1.02] active:scale-[0.98] bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 hover:opacity-90">
+            <div class="flex items-center gap-3">
+                <i data-lucide="instagram" class="w-6 h-6"></i>
+                <span>Instagram</span>
+            </div>
+            <div class="bg-white/20 p-1.5 rounded-full">
+                <i data-lucide="more-horizontal" class="w-4 h-4"></i>
+            </div>
+        </a>
+
+        <!-- Contact Info -->
+        <div class="pt-6 pb-2">
+            <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4 px-2">Contacto Directo</h2>
+            <div class="grid grid-cols-1 gap-3">
+                <a href="mailto:hola@juanperez.com" class="flex items-center gap-3 p-4 bg-white border border-slate-200 rounded-2xl text-slate-700 hover:bg-slate-50 transition-colors shadow-sm">
+                    <i data-lucide="mail" class="w-5 h-5 text-indigo-500"></i>
+                    <span>hola@juanperez.com</span>
+                </a>
+                <a href="tel:+1234567890" class="flex items-center gap-3 p-4 bg-white border border-slate-200 rounded-2xl text-slate-700 hover:bg-slate-50 transition-colors shadow-sm">
+                    <i data-lucide="phone" class="w-5 h-5 text-indigo-500"></i>
+                    <span>+1 (234) 567-890</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Hidden Section (Future Links) -->
+        <div class="pt-8 text-center">
+            <button id="toggle-hidden" class="text-xs text-slate-300 hover:text-slate-400 transition-colors">
+                ...
+            </button>
+            
+            <div id="hidden-links" class="hidden-section mt-6 space-y-3 overflow-hidden">
+                <p class="text-xs text-slate-400 mb-2 italic">Próximamente:</p>
+                
+                <div class="flex items-center gap-3 p-4 bg-slate-100 border border-dashed border-slate-300 rounded-2xl text-slate-400 grayscale opacity-60">
+                    <i data-lucide="facebook" class="w-6 h-6"></i>
+                    <span class="text-sm">Facebook (Inactivo)</span>
+                </div>
+                
+                <div class="flex items-center gap-3 p-4 bg-slate-100 border border-dashed border-slate-300 rounded-2xl text-slate-400 grayscale opacity-60">
+                    <i data-lucide="twitter" class="w-6 h-6"></i>
+                    <span class="text-sm">Twitter / X (Inactivo)</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-4 bg-slate-100 border border-dashed border-slate-300 rounded-2xl text-slate-400 grayscale opacity-60">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    <span class="text-sm">LinkedIn (Inactivo)</span>
+                </div>
+
+                <div class="flex items-center gap-3 p-4 bg-slate-100 border border-dashed border-slate-300 rounded-2xl text-slate-400 grayscale opacity-60">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                    <span class="text-sm">GitHub (Inactivo)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto pt-12 text-slate-400 text-xs text-center">
+        &copy; <span id="year"></span> Juan Pérez. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Toggle Hidden Section
+        const toggleBtn = document.getElementById('toggle-hidden');
+        const hiddenLinks = document.getElementById('hidden-links');
+
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = hiddenLinks.classList.toggle('show');
+            toggleBtn.textContent = isHidden ? 'Ocultar redes futuras' : '...';
+        });
+
+        // Simple Entrance Animation
+        window.addEventListener('DOMContentLoaded', () => {
+            const profile = document.querySelector('.profile-section');
+            profile.classList.remove('opacity-0', 'translate-y-4');
+        });
+    </script>
+</body>
+</html>
+
